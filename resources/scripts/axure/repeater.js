@@ -1433,7 +1433,7 @@ $axure.internal(function($ax) {
             var headerHeight = obj.headerHeight ? obj.headerHeight : 0;
             var footerHeight = obj.footerHeight ? obj.footerHeight : 0;
 
-            $ax.adaptive.addNiceScroll(stateQuery, { touchbehavior: true, bouncescroll: false, grabcursorenabled: false, railmargin: { top: headerHeight, bottom: footerHeight }, scrollbarid: stateId + "-sb" });
+            $ax.adaptive.addNiceScroll(stateQuery, { emulatetouch: true, bouncescroll: false, grabcursorenabled: false, railmargin: { top: headerHeight, bottom: footerHeight }, scrollbarid: stateId + "-sb" });
             stateQuery.find('.nicescroll-rails').css('margin-top', headerHeight + 'px');
         } else {
             $ax.adaptive.addNiceScroll(stateQuery, { emulatetouch: true, horizrailenabled: obj.scrollbars != 'verticalAsNeeded' }, blockResetScroll);
