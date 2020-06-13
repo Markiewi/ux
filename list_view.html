@@ -1,0 +1,302 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+    body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  width: 360px;
+  height: 50 px;
+  overflow: hidden;
+  background-color: #000000;
+}
+.botnav {
+  width: 360px;
+  height: 50 px;
+  overflow: hidden;
+  background-color: #000000;
+}
+.topnav img{
+    float: left;
+  text-align: center;
+  padding: 10px 10px;
+  padding-left: 30px;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+    <title>List view
+    </title>
+    <link rel="shortcut icon" href="#"/>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          
+</head>
+<body id="body">
+    <div class="topnav">
+        <img src="images/account.png" style="padding-left: 15px;"></img>
+        <img src="images/home.png"></img>
+        <img src="images/chats.png"></img>
+        <img src="images/notifications.png"></img>
+      </div>
+      <div style=" width:360px; height: 560px;">
+        <input style="width:280px; margin-left: 10px; margin-top: 5px;  "type="text" class="form-control" id="formGroupExampleInput" placeholder="Szukaj przedmiotów...">
+        <img style="margin-left:1%; width: 50px; height: 50px; position: relative; left:290px; bottom:40px" src="images/microphone.png"></img>
+        <div style="position: relative; bottom: 40px; left:10px" >
+            <div style="float:left">
+        <input  type="checkbox" id="El" name="El" value="Elektronika">
+        <label for="El">Elektronika</label><br>
+        </div>
+        <div style ="position: relative ;left:80px;">
+        <input type="checkbox" id="PrzK" name="PrzK" value="Przybory kuchenne">
+        <label for="PrzK">Przybory kuchenne</label><br>
+        </div>
+        <div style="float:left">
+        <input  type="checkbox" id="ArtH" name="ArtH" value="Artykuły higieniczne">
+        <label for="ArtH">Artykuły higieniczne</label><br>
+        </div>
+        <div style ="position: relative ;left:16px;">
+        <input  type="checkbox" id="ArtSp" name="ArtSp" value="Artykuły spożywcze">
+        <label for="ArtSp">Artykuły spożywcze</label><br>
+        </div>
+        <div class="slidecontainer">
+            <label >Minimalna reputacja</label>
+            <input style="width:30px; height: 25px; text-align: center; position:relative; left:13px;" type="text" id="minRep" value="0" oninput="updateMinRepSlider(this.value);">
+            <input style="position: relative; top:5px; left:13px; width: 140px;" type="range" min="0" max="50" value="0" class="slider" id="minRange" onchange="updateMinRep(this.value);"><br>
+            <label >Maksymalna reputacja</label>
+            <input style="width:30px; height: 25px; text-align: center;" type="text" id="maxRep" value="0" oninput="updateMaxRepSlider(this.value);">
+            <input style="position: relative; top:5px;  width: 140px;" type="range" min="0" max="50" value="0" class="slider" id="maxRange" onchange="updateMaxRep(this.value);">
+          </div>
+    </div>
+
+
+    <div id=cards-container1 style="display:block">
+    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:30px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+        <div class="card-body">
+            <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+            <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+            <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+            <p style=" position:relative; bottom:25px; right:10px; color: black;">3kg</p>
+            <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Tomek</b></p>
+            <p style="float:right; position:relative; bottom:65px;  color: black;"><b>4.5/5</b></p>
+            <img src="images/profile1.png" style="float:right; position:relative; bottom:100px; left:110px;"></img>
+        </div>
+    </div>
+    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:25px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+      <div class="card-body">
+        <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+        <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+        <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+        <p style=" position:relative; bottom:25px; right:10px; color: black;">10 kilogram</p>
+        <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Names</b></p>
+        <p style="float:right; position:relative; bottom:65px;  color: black;"><b>4.5/5</b></p>
+        <img src="images/profile2.png" style="float:right; position:relative; bottom:100px; left:113px;"></img>
+      </div>
+    </div>
+    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:20px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+      <div class="card-body">
+        <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+        <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+        <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+        <p style=" position:relative; bottom:25px; right:10px; color: black;">100 gram</p>
+        <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>San</b></p>
+        <p style="float:right; position:relative; bottom:65px;  right:30px; color: black;"><b>4.5/5</b></p>
+        <img src="images/profile3.png" style="float:right; position:relative; bottom:100px; left:88px;"></img>
+      </div>
+    </div>
+    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:15px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+      <div class="card-body">
+        <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+        <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+        <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+        <p style=" position:relative; bottom:25px; right:10px; color: black;">40 kg</p>
+        <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Kasia</b></p>
+        <p style="float:right; position:relative; bottom:65px;  right: 20px; color: black;"><b>4.5/5</b></p>
+        <img src="images/profile4.png" style="float:right; position:relative; bottom:100px; left:100px;"></img>
+      </div>
+    </div>
+    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:10px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+      <div class="card-body">
+        <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+        <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+        <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+        <p style=" position:relative; bottom:25px; right:10px; color: black;">3kg</p>
+        <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Czihi</b></p>
+        <p style="float:right; position:relative; bottom:65px;  right: 20px; color: black;"><b>4.5/5</b></p>
+        <img src="images/profile5.png" style="float:right; position:relative; bottom:100px; left:97px;"></img>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <div id=cards-container2 style="display:none">
+    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:30px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+      <div class="card-body">
+        <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+        <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+        <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+        <p style=" position:relative; bottom:25px; right:10px; color: black;">10 kilogram</p>
+        <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Names</b></p>
+        <p style="float:right; position:relative; bottom:65px;  color: black;"><b>4.5/5</b></p>
+        <img src="images/profile2.png" style="float:right; position:relative; bottom:100px; left:113px;"></img>
+      </div>
+    </div>
+    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:25px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+      <div class="card-body">
+        <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+        <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+        <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+        <p style=" position:relative; bottom:25px; right:10px; color: black;">3kg</p>
+        <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Tomek</b></p>
+        <p style="float:right; position:relative; bottom:65px;  color: black;"><b>4.5/5</b></p>
+        <img src="images/profile1.png" style="float:right; position:relative; bottom:100px; left:110px;"></img>
+      </div>
+
+    </div>
+    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:20px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+      <div class="card-body">
+        <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+        <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+        <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+        <p style=" position:relative; bottom:25px; right:10px; color: black;">100 gram</p>
+        <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>San</b></p>
+        <p style="float:right; position:relative; bottom:65px;  right:30px; color: black;"><b>4.5/5</b></p>
+        <img src="images/profile3.png" style="float:right; position:relative; bottom:100px; left:88px;"></img>
+      </div>
+    </div>
+    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:15px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+      <div class="card-body">
+        <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+        <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+        <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+        <p style=" position:relative; bottom:25px; right:10px; color: black;">3kg</p>
+        <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Czihi</b></p>
+        <p style="float:right; position:relative; bottom:65px;  right: 20px; color: black;"><b>4.5/5</b></p>
+        <img src="images/profile5.png" style="float:right; position:relative; bottom:100px; left:97px;"></img>
+      </div>
+    
+    </div>
+    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:10px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+      <div class="card-body">
+        <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+        <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+        <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+        <p style=" position:relative; bottom:25px; right:10px; color: black;">40 kg</p>
+        <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Kasia</b></p>
+        <p style="float:right; position:relative; bottom:65px;  right: 20px; color: black;"><b>4.5/5</b></p>
+        <img src="images/profile4.png" style="float:right; position:relative; bottom:100px; left:100px;"></img>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card bg-warning text-white" style="position: relative; right:10px;float:right; width:50px; height:20px;">
+    <div class="card-body"> <p style="float:left; position:relative; bottom:22px; right:10px; color: black;"><b id="pag">1/2</b></p></div>
+
+</div>
+</div>
+      
+      <div class="topnav" style="float:left; position: relative;">
+        <img onclick="changeLeft()"src="images/arrow_left.png" style="padding-left: 15px;cursor: pointer"></img>
+        <img onclick="changeRight()"src="images/arrow_right.png"style="cursor: pointer" ></img>
+        <img onclick="location.href='http://localhost:8070/form'" src="images/back.png" style="padding-left: 100px"></img>
+ 
+      </div>
+     
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script>
+  function updateMinRep(val) {
+          document.getElementById('minRep').value=parseInt(val)/10; 
+        }
+        
+function updateMaxRep(val) {
+          document.getElementById('maxRep').value=parseInt(val)/10; 
+        }
+
+function updateMinRepSlider(val) {
+    if(val>5){
+        val=5
+    }   
+    document.getElementById('minRep').value=val; 
+          document.getElementById('minRange').value=val*10; 
+        }
+
+function updateMaxRepSlider(val) {
+    if(val>5){
+        val=5
+    }   
+    document.getElementById('maxRep').value=val; 
+          document.getElementById('maxRange').value=val*10; 
+        }
+
+function changeLeft(){
+  document.getElementById("cards-container2").style.display="none"
+  document.getElementById("cards-container1").style.display="block"
+  document.getElementById("pag").innerHTML="1/2"
+}
+
+function changeRight(){
+  document.getElementById("cards-container1").style.display="none"
+  document.getElementById("cards-container2").style.display="block"
+  document.getElementById("pag").innerHTML="2/2"
+}
+
+function goForm() {
+      
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = () => response(xhr);
+      xhr.open('GET', '/form', true);
+      xhr.send(null);
+        flag=1;
+    }
+
+    function response(xhr) {
+          try {
+            if (xhr.readyState == XMLHttpRequest.DONE) {
+              if (xhr.status == 200) {             
+                
+              }
+              else
+                window.alert('There was a problem with this request.');
+            }
+          }
+          catch (e) {
+            window.alert('Exception caught: ' + e.description);
+          }
+        }
+</script>
+</body>
+</html>
