@@ -23,10 +23,10 @@ http.createServer (function (request, response) {
     } 
      else{
 
-        if(url_parts.pathname.startsWith('/form')){
-            fs.stat('form.html', function (err,stats) {
+        if(url_parts.pathname.startsWith('/pozyczone')){
+            fs.stat('pozyczone_view.html', function (err,stats) {
                 if (err == null) { 
-                    fs.readFile ('form.html', function (err, data) {
+                    fs.readFile ('pozyczone_view.html', function (err, data) {
                       response.writeHead(200, {"Content-Type": "text/html; charset=utf-8"});
                       response.write(data); 
                       response.end();

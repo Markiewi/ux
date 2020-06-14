@@ -57,12 +57,12 @@
 </head>
 <body id="body">
     <div class="topnav">
-        <img src="images/account.png" style="padding-left: 15px;"></img>
-        <img src="images/home.png"></img>
+        <img onclick="location.href='makieta_-_profil_u_ytkownika.html'" src="images/account.png" style="padding-left: 19px; cursor:pointer;"></img>
+        <img onclick="location.href='pozyczone_view.html'" src="images/home.png" style="cursor: pointer"></img>
         <img src="images/chats.png"></img>
-        <img src="images/notifications.png"></img>
+        <img onclick="location.href='makieta_-_powiadomienia.html'"src="images/notifications.png" style="cursor: pointer">></img>
       </div>
-      <div style=" width:360px; height: 560px;">
+      <div style=" width:360px; height: 600px;">
         <input style="width:280px; margin-left: 10px; margin-top: 5px;  "type="text" class="form-control" id="formGroupExampleInput" placeholder="Szukaj przedmiotów...">
         <img style="margin-left:1%; width: 50px; height: 50px; position: relative; left:290px; bottom:40px" src="images/microphone.png"></img>
         <div style="position: relative; bottom: 40px; left:10px" >
@@ -82,6 +82,7 @@
         <input  type="checkbox" id="ArtSp" name="ArtSp" value="Artykuły spożywcze">
         <label for="ArtSp">Artykuły spożywcze</label><br>
         </div>
+
         <div class="slidecontainer">
             <label >Minimalna reputacja</label>
             <input style="width:30px; height: 25px; text-align: center; position:relative; left:13px;" type="text" id="minRep" value="0" oninput="updateMinRepSlider(this.value);">
@@ -92,125 +93,127 @@
           </div>
     </div>
 
+          <div id=cards-container1 style="display:block">
+              <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:30px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+                  <a class="card-body" href="nowa_prosba_view.html">
+                      <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+                      <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+                      <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+                      <p style=" position:relative; bottom:25px; right:10px; color: black;">10 kilogram</p>
+                      <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Names</b></p>
+                      <p style="float:right; position:relative; bottom:65px;  color: black;"><b>4.5/5</b></p>
+                      <img src="images/profile2.png" style="float:right; position:relative; bottom:100px; left:113px;"></img>
+                  </a>
+              </div>
+              <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:25px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+                  <a class="card-body" href="nowa_prosba_view.html">
+                      <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+                      <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+                      <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+                      <p style=" position:relative; bottom:25px; right:10px; color: black;">3kg</p>
+                      <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Tomek</b></p>
+                      <p style="float:right; position:relative; bottom:65px;  color: black;"><b>4.5/5</b></p>
+                      <img src="images/profile1.png" style="float:right; position:relative; bottom:100px; left:110px;"></img>
+                  </a>
 
-    <div id=cards-container1 style="display:block">
-    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:30px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
-        <div class="card-body">
-            <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
-            <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
-            <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
-            <p style=" position:relative; bottom:25px; right:10px; color: black;">3kg</p>
-            <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Tomek</b></p>
-            <p style="float:right; position:relative; bottom:65px;  color: black;"><b>4.5/5</b></p>
-            <img src="images/profile1.png" style="float:right; position:relative; bottom:100px; left:110px;"></img>
-        </div>
-    </div>
-    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:25px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
-      <div class="card-body">
-        <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
-        <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
-        <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
-        <p style=" position:relative; bottom:25px; right:10px; color: black;">10 kilogram</p>
-        <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Names</b></p>
-        <p style="float:right; position:relative; bottom:65px;  color: black;"><b>4.5/5</b></p>
-        <img src="images/profile2.png" style="float:right; position:relative; bottom:100px; left:113px;"></img>
-      </div>
-    </div>
-    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:20px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
-      <div class="card-body">
-        <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
-        <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
-        <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
-        <p style=" position:relative; bottom:25px; right:10px; color: black;">100 gram</p>
-        <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>San</b></p>
-        <p style="float:right; position:relative; bottom:65px;  right:30px; color: black;"><b>4.5/5</b></p>
-        <img src="images/profile3.png" style="float:right; position:relative; bottom:100px; left:88px;"></img>
-      </div>
-    </div>
-    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:15px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
-      <div class="card-body">
-        <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
-        <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
-        <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
-        <p style=" position:relative; bottom:25px; right:10px; color: black;">40 kg</p>
-        <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Kasia</b></p>
-        <p style="float:right; position:relative; bottom:65px;  right: 20px; color: black;"><b>4.5/5</b></p>
-        <img src="images/profile4.png" style="float:right; position:relative; bottom:100px; left:100px;"></img>
-      </div>
-    </div>
-    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:10px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
-      <div class="card-body">
-        <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
-        <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
-        <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
-        <p style=" position:relative; bottom:25px; right:10px; color: black;">3kg</p>
-        <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Czihi</b></p>
-        <p style="float:right; position:relative; bottom:65px;  right: 20px; color: black;"><b>4.5/5</b></p>
-        <img src="images/profile5.png" style="float:right; position:relative; bottom:100px; left:97px;"></img>
-      </div>
-    </div>
+              </div>
+              <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:20px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+                  <a class="card-body" href="nowa_prosba_view.html">
+                      <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+                      <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+                      <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+                      <p style=" position:relative; bottom:25px; right:10px; color: black;">100 gram</p>
+                      <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>San</b></p>
+                      <p style="float:right; position:relative; bottom:65px;  right:30px; color: black;"><b>4.5/5</b></p>
+                      <img src="images/profile3.png" style="float:right; position:relative; bottom:100px; left:88px;"></img>
+                  </a>
+              </div>
+              <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:15px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+                  <a class="card-body" href="nowa_prosba_view.html">
+                      <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+                      <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+                      <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+                      <p style=" position:relative; bottom:25px; right:10px; color: black;">3kg</p>
+                      <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Czihi</b></p>
+                      <p style="float:right; position:relative; bottom:65px;  right: 20px; color: black;"><b>4.5/5</b></p>
+                      <img src="images/profile5.png" style="float:right; position:relative; bottom:100px; left:97px;"></img>
+                  </a>
+
+              </div>
+              <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:10px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+                  <a class="card-body" href="nowa_prosba_view.html">
+                      <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+                      <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+                      <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+                      <p style=" position:relative; bottom:25px; right:10px; color: black;">40 kg</p>
+                      <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Kasia</b></p>
+                      <p style="float:right; position:relative; bottom:65px;  right: 20px; color: black;"><b>4.5/5</b></p>
+                      <img src="images/profile4.png" style="float:right; position:relative; bottom:100px; left:100px;"></img>
+                  </a>
+              </div>
   </div>
   
 
 
   <div id=cards-container2 style="display:none">
-    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:30px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
-      <div class="card-body">
-        <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
-        <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
-        <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
-        <p style=" position:relative; bottom:25px; right:10px; color: black;">10 kilogram</p>
-        <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Names</b></p>
-        <p style="float:right; position:relative; bottom:65px;  color: black;"><b>4.5/5</b></p>
-        <img src="images/profile2.png" style="float:right; position:relative; bottom:100px; left:113px;"></img>
+      <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:30px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+          <a class="card-body" href="nowa_prosba_view.html">
+
+              <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+              <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+              <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+              <p style=" position:relative; bottom:25px; right:10px; color: black;">3kg</p>
+              <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Tomek</b></p>
+              <p style="float:right; position:relative; bottom:65px;  color: black;"><b>4.5/5</b></p>
+              <img src="images/profile1.png" style="float:right; position:relative; bottom:100px; left:110px;"></img>
+          </a>
       </div>
-    </div>
-    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:25px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
-      <div class="card-body">
-        <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
-        <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
-        <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
-        <p style=" position:relative; bottom:25px; right:10px; color: black;">3kg</p>
-        <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Tomek</b></p>
-        <p style="float:right; position:relative; bottom:65px;  color: black;"><b>4.5/5</b></p>
-        <img src="images/profile1.png" style="float:right; position:relative; bottom:100px; left:110px;"></img>
+      <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:25px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+          <a class="card-body" href="nowa_prosba_view.html">
+              <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+              <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+              <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+              <p style=" position:relative; bottom:25px; right:10px; color: black;">10 kilogram</p>
+              <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Names</b></p>
+              <p style="float:right; position:relative; bottom:65px;  color: black;"><b>4.5/5</b></p>
+              <img src="images/profile2.png" style="float:right; position:relative; bottom:100px; left:113px;"></img>
+          </a>
+      </div>
+      <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:20px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+          <a class="card-body" href="nowa_prosba_view.html">
+              <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+              <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+              <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+              <p style=" position:relative; bottom:25px; right:10px; color: black;">100 gram</p>
+              <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>San</b></p>
+              <p style="float:right; position:relative; bottom:65px;  right:30px; color: black;"><b>4.5/5</b></p>
+              <img src="images/profile3.png" style="float:right; position:relative; bottom:100px; left:88px;"></img>
+          </a>
+      </div>
+      <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:15px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+          <a class="card-body" href="nowa_prosba_view.html">
+              <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+              <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+              <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+              <p style=" position:relative; bottom:25px; right:10px; color: black;">40 kg</p>
+              <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Kasia</b></p>
+              <p style="float:right; position:relative; bottom:65px;  right: 20px; color: black;"><b>4.5/5</b></p>
+              <img src="images/profile4.png" style="float:right; position:relative; bottom:100px; left:100px;"></img>
+          </a>
+      </div>
+      <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:10px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
+          <a class="card-body" href="nowa_prosba_view.html">
+              <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
+              <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
+              <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
+              <p style=" position:relative; bottom:25px; right:10px; color: black;">3kg</p>
+              <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Czihi</b></p>
+              <p style="float:right; position:relative; bottom:65px;  right: 20px; color: black;"><b>4.5/5</b></p>
+              <img src="images/profile5.png" style="float:right; position:relative; bottom:100px; left:97px;"></img>
+          </a>
       </div>
 
-    </div>
-    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:20px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
-      <div class="card-body">
-        <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
-        <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
-        <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
-        <p style=" position:relative; bottom:25px; right:10px; color: black;">100 gram</p>
-        <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>San</b></p>
-        <p style="float:right; position:relative; bottom:65px;  right:30px; color: black;"><b>4.5/5</b></p>
-        <img src="images/profile3.png" style="float:right; position:relative; bottom:100px; left:88px;"></img>
-      </div>
-    </div>
-    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:15px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
-      <div class="card-body">
-        <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
-        <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
-        <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
-        <p style=" position:relative; bottom:25px; right:10px; color: black;">3kg</p>
-        <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Czihi</b></p>
-        <p style="float:right; position:relative; bottom:65px;  right: 20px; color: black;"><b>4.5/5</b></p>
-        <img src="images/profile5.png" style="float:right; position:relative; bottom:100px; left:97px;"></img>
-      </div>
-    
-    </div>
-    <div class="card bg-warning text-white" style="height: 62px; width: 340px; margin-left: 10px; position: relative; bottom:10px; border-color: black; border-style: solid; border-width: medium; cursor: pointer">
-      <div class="card-body">
-        <img src="images/item.png" style="float:left; position:relative; bottom:20px; right:20px;"></img>
-        <p style="float:left; position:relative; bottom:20px; right:10px; color: black;"><b>Cukier biały</b></p>
-        <p style="float:left; position:relative; bottom:3px; right:100px; color: black;">Artykuły spożywcze</p>
-        <p style=" position:relative; bottom:25px; right:10px; color: black;">40 kg</p>
-        <p style="float:right; position:relative; bottom:100px; right:50px; color: black;"><b>Kasia</b></p>
-        <p style="float:right; position:relative; bottom:65px;  right: 20px; color: black;"><b>4.5/5</b></p>
-        <img src="images/profile4.png" style="float:right; position:relative; bottom:100px; left:100px;"></img>
-      </div>
-    </div>
+
   </div>
 
 
@@ -223,7 +226,7 @@
       <div class="topnav" style="float:left; position: relative;">
         <img onclick="changeLeft()"src="images/arrow_left.png" style="padding-left: 15px;cursor: pointer"></img>
         <img onclick="changeRight()"src="images/arrow_right.png"style="cursor: pointer" ></img>
-        <img onclick="location.href='http://localhost:8070/form'" src="images/back.png" style="padding-left: 100px"></img>
+          <img onclick="location.href='pozyczone_view.html'" src="images/back.png" style="float:right; cursor: pointer"></img>
  
       </div>
      
